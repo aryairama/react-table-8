@@ -1,0 +1,49 @@
+.datatable {
+  table-layout: auto;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  @apply min-w-full;
+}
+
+.datatable-th {
+  @apply text-sm font-medium text-gray-900 px-6 py-4 text-left whitespace-nowrap bg-white;
+}
+
+.datatable-th:first-child {
+  @apply pl-10;
+}
+
+.datatable-tbody-tr {
+  @apply bg-white;
+}
+
+.datatable-td-content {
+  @apply text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-b;
+}
+
+.datatable-tbody-tr > .datatable-td:first-child > .datatable-td-content {
+  @apply ml-4;
+}
+
+.datatable-tbody-tr > .datatable-td:last-child > .datatable-td-content {
+  @apply mr-4;
+}
+
+/* rouned tr td */
+.datatable-tbody-tr:first-child .datatable-td:first-child {
+  @apply rounded-tl-lg;
+}
+
+.datatable-tbody-tr:first-child .datatable-td:last-child {
+  @apply rounded-tr-lg;
+}
+
+/* rouned tr th */
+
+.datatable-th:first-child {
+  @apply rounded-tl-lg rounded-bl-lg;
+}
+
+.datatable-th:last-child {
+  @apply rounded-tr-lg rounded-br-lg;
+}
