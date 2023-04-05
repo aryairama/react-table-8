@@ -27,55 +27,57 @@ const BasicTable = () => {
   ];
   const table = useReactTable({ data, columns, getCoreRowModel: getCoreRowModel() });
   return (
-    <div className="container bg-red-500 pt-5">
-      <div className="w-full overflow-y-auto ">
-        <table className={style['datatable']}>
-          <thead>
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr className={style['datatable-thead-tr']} key={headerGroup.id}>
-                {headerGroup.headers.map((header) => (
-                  <th className={style['datatable-th']} key={header.id}>
-                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
-                  </th>
-                ))}
+    <div className="bg-[#282C34]">
+      <div className="container pt-5 wf">
+        <div className="w-full overflow-y-auto ">
+          <table className={style['datatable']}>
+            <thead>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <tr className={style['datatable-thead-tr']} key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <th className={style['datatable-th']} key={header.id}>
+                      {header.isPlaceholder ? null : flexRender(header.column.columnDef.header, header.getContext())}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </thead>
+            <thead>
+              <tr>
+                <td className="p-2"></td>
               </tr>
-            ))}
-          </thead>
-          <thead>
-            <tr>
-              <td className="p-2"></td>
-            </tr>
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr className={style['datatable-tbody-tr']} key={row.id}>
-                {row.getVisibleCells().map((cell) => (
-                  <td className={style['datatable-td']} key={cell.id}>
-                    <div className={style['datatable-td-content']}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </div>
-                  </td>
-                ))}
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map((row) => (
+                <tr className={style['datatable-tbody-tr']} key={row.id}>
+                  {row.getVisibleCells().map((cell) => (
+                    <td className={style['datatable-td']} key={cell.id}>
+                      <div className={style['datatable-td-content']}>
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+            <thead>
+              <tr>
+                <td className="p-2"></td>
               </tr>
-            ))}
-          </tbody>
-          <thead>
-            <tr>
-              <td className="p-2"></td>
-            </tr>
-          </thead>
-          <tfoot>
-            {table.getFooterGroups().map((footerGroup) => (
-              <tr className={style['datatable-thead-tr']} key={footerGroup.id}>
-                {footerGroup.headers.map((header) => (
-                  <th className={style['datatable-th']} key={header.id}>
-                    {header.isPlaceholder ? null : flexRender(header.column.columnDef.footer, header.getContext())}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </tfoot>
-        </table>
+            </thead>
+            <tfoot>
+              {table.getFooterGroups().map((footerGroup) => (
+                <tr className={style['datatable-thead-tr']} key={footerGroup.id}>
+                  {footerGroup.headers.map((header) => (
+                    <th className={style['datatable-th']} key={header.id}>
+                      {header.isPlaceholder ? null : flexRender(header.column.columnDef.footer, header.getContext())}
+                    </th>
+                  ))}
+                </tr>
+              ))}
+            </tfoot>
+          </table>
+        </div>
       </div>
     </div>
   );

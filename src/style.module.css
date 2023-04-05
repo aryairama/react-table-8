@@ -18,14 +18,14 @@
 }
 
 .datatable-td-content {
-  @apply text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap border-b;
+  @apply text-sm text-gray-900 font-normal px-6 py-4 whitespace-nowrap border-b;
 }
 
-.datatable-tbody-tr > .datatable-td:first-child > .datatable-td-content {
+.datatable-tbody-tr>.datatable-td:first-child>.datatable-td-content {
   @apply ml-4;
 }
 
-.datatable-tbody-tr > .datatable-td:last-child > .datatable-td-content {
+.datatable-tbody-tr>.datatable-td:last-child>.datatable-td-content {
   @apply mr-4;
 }
 

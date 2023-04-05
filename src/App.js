@@ -20,10 +20,10 @@ function App() {
 function Home() {
   return (
     <div className="App">
-      <header className="App-header !bg-red-500 !justify-start">
+      <header className="App-header !justify-start">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Example Table Tanstack</p>
-        <ul class="list-disc">
+        <ul className="list-disc">
           <Link className="text-base" to="/basic-table">
             Basic Table
           </Link>
