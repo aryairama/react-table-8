@@ -1029,5 +1029,15 @@ module.exports = {
       50: '50',
     },
   },
-  plugins: [],
+  plugins: [require('daisyui')],
+  daisyui: {
+    styled: true,
+    themes: true,
+    base: true,
+    utils: true,
+    logs: true,
+    rtl: false,
+    prefix: 'dsy-',
+    darkTheme: 'dark',
+  },
 };

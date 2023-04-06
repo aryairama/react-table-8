@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 const BasicTable = lazy(() => import('./BasicTable'));
 const SortingTable = lazy(() => import('./SortingTable'));
 const FormatingTable = lazy(() => import('./FormatingTable'));
+const GlobalFilterTable = lazy(() => import('./GlobalFilterTable'));
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/basic-table" element={<BasicTable />} />
           <Route path="/sorting-table" element={<SortingTable />} />
           <Route path="/formating-table" element={<FormatingTable />} />
+          <Route path="/global-filter-table" element={<GlobalFilterTable />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
@@ -36,6 +38,9 @@ function Home() {
           </Link>
           <Link className="text-base" to="/formating-table">
             Formating Table
+          </Link>
+          <Link className="text-base" to="/global-filter-table">
+            Global Filter Table
           </Link>
         </ul>
       </header>
