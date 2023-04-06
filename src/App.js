@@ -4,6 +4,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 const BasicTable = lazy(() => import('./BasicTable'));
 const SortingTable = lazy(() => import('./SortingTable'));
+const FormatingTable = lazy(() => import('./FormatingTable'));
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/basic-table" element={<BasicTable />} />
           <Route path="/sorting-table" element={<SortingTable />} />
+          <Route path="/formating-table" element={<FormatingTable />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
@@ -31,6 +33,9 @@ function Home() {
           </Link>
           <Link className="text-base" to="/sorting-table">
             Sorting Table
+          </Link>
+          <Link className="text-base" to="/formating-table">
+            Formating Table
           </Link>
         </ul>
       </header>
