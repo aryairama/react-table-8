@@ -7,6 +7,7 @@ const SortingTable = lazy(() => import('./SortingTable'));
 const FormatingTable = lazy(() => import('./FormatingTable'));
 const GlobalFilterTable = lazy(() => import('./GlobalFilterTable'));
 const GlobalFilterColumnFilterTable = lazy(() => import('./GlobalFilterColumnFilterTable'));
+const PaginationTable = lazy(() => import('./PaginationTable'));
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/formating-table" element={<FormatingTable />} />
           <Route path="/global-filter-table" element={<GlobalFilterTable />} />
           <Route path="/global-filter-column-filter-table" element={<GlobalFilterColumnFilterTable />} />
+          <Route path="/pagination-table" element={<PaginationTable />} />
         </Routes>
       </BrowserRouter>
     </Suspense>
@@ -46,6 +48,9 @@ function Home() {
           </Link>
           <Link className="text-base" to="/global-filter-column-filter-table">
             Global Filter & Column Filter Table
+          </Link>
+          <Link className="text-base" to="/pagination-table">
+            Pagination Table
           </Link>
         </ul>
       </header>

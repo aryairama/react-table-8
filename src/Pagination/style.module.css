@@ -1,0 +1,39 @@
+.pagination {
+  @apply flex flex-wrap w-auto list-none text-sm text-gray-custom-700 font-medium p-0;
+}
+
+.pagination > li {
+  @apply bg-white px-[12.5px] py-[6px] border border-gray-custom-200;
+}
+
+.pagination > li:first-child {
+  @apply rounded-l-[6px];
+}
+
+.pagination > li:last-child {
+  @apply rounded-r-[6px];
+}
+
+.pagination > li:not(.active):not(.disabled) {
+  @apply cursor-pointer;
+}
+
+/* .pagination > li:not(.active):not(.disabled):hover {
+  @apply bg-green-custom-900 text-white;
+} */
+
+.pagination > .next-prev:not(.active):not(.disabled):hover {
+  @apply text-green-custom-900;
+}
+
+.pagination > li:not(.active):not(.disabled):not(.next-prev):active {
+  @apply bg-green-custom-900 text-white border-x-green-custom-900;
+}
+
+.pagination > li.active {
+  @apply bg-green-custom-900 text-white border-x-green-custom-900;
+}
+
+.pagination > li.disabled {
+  @apply pointer-events-none text-gray-300;
+}
