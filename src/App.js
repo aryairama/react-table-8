@@ -10,6 +10,9 @@ const GlobalFilterColumnFilterTable = lazy(() => import('./GlobalFilterColumnFil
 const PaginationTable = lazy(() => import('./PaginationTable'));
 const RowSelectTable = lazy(() => import('./RowSelectTable'));
 const OrderVisibilityTable = lazy(() => import('./OrderVisibilityTable'));
+const PaginationSortingGlobalFilterControlledTable = lazy(() =>
+  import('./PaginationSortingGlobalFilterControlledTable')
+);
 
 function App() {
   return (
@@ -25,6 +28,10 @@ function App() {
           <Route path="/pagination-table" element={<PaginationTable />} />
           <Route path="/row-select-table" element={<RowSelectTable />} />
           <Route path="/order-visibility-table" element={<OrderVisibilityTable />} />
+          <Route
+            path="/pagination-sorting-global-filter-controlled"
+            element={<PaginationSortingGlobalFilterControlledTable />}
+          />
         </Routes>
       </BrowserRouter>
     </Suspense>
@@ -61,6 +68,9 @@ function Home() {
           </Link>
           <Link className="text-base" to="/order-visibility-table">
             Order & Visibility Table
+          </Link>
+          <Link className="text-base" to="/pagination-sorting-global-filter-controlled">
+            Pagination Sorting Global Filter Controlled Table
           </Link>
         </ul>
       </header>
